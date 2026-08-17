@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 東京 4天3夜 獨旅行程備忘錄</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #3b82f6;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #334155;
+      --text-dark: #0f172a;
+      --accent: #0284c7;
+      --border: #e2e8f0;
+      --success: #10b981;
+      --warning: #f59e0b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px 12px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #0284c7);
+      color: white;
+      padding: 28px 20px;
+      border-radius: 16px;
+      text-align: center;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    header h1 { font-size: 1.7rem; margin-bottom: 8px; font-weight: 700; }
+    header p { font-size: 0.95rem; opacity: 0.9; }
+    
+    .card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 8px;
+    }
+    
+    /* 航班與住宿快速資訊 */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .info-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      border-radius: 10px;
+    }
+    .info-box strong { color: var(--text-dark); display: block; margin-bottom: 4px; }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    .badge-blue { background: #e0f2fe; color: #0369a1; }
+    .badge-green { background: #dcfce7; color: #15803d; }
+    .badge-amber { background: #fef3c7; color: #b45309; }
+
+    /* 行程時間軸 */
+    .day-block { margin-bottom: 18px; }
+    .day-header {
+      background: #eff6ff;
+      color: var(--primary);
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+    .timeline-item {
+      padding: 8px 0 8px 12px;
+      border-left: 3px solid var(--primary-light);
+      margin-left: 8px;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 14px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--primary-light);
+    }
+    .timeline-time { font-weight: 700; color: var(--accent); font-size: 0.9rem; }
+    .timeline-content { font-size: 0.95rem; margin-top: 2px; }
+    .timeline-sub { font-size: 0.85rem; color: #64748b; margin-top: 4px; }
+
+    /* 表格樣式 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th { background: #f8fafc; color: var(--text-dark); font-weight: 600; }
+    
+    /* 清單與提醒 */
+    ul { list-style: none; padding-left: 0; }
+    li { margin-bottom: 8px; position: relative; padding-left: 20px; font-size: 0.93rem; }
+    li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: bold;
+    }
+    .warning-li::before { content: "⚠️"; color: var(--warning); }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>✈️ 東京 4天3夜 獨旅行程</h1>
+    <p>2026.09.14 (一) ～ 2026.09.17 (四) ｜ 藥品代收・海景放鬆・新宿代購</p>
+  </header>
+
+  <!-- 快速概覽卡片 -->
+  <div class="card">
+    <div class="card-title">📌 旅程核心資訊</div>
+    <div class="info-grid">
+      <div class="info-box">
+        <strong>🏨 住宿飯店</strong>
+        APA Hotel Ueno Ekiminami (上野駅南)<br>
+        <span class="badge badge-blue">4天3夜 NT$ 7,083</span>
+      </div>
+      <div class="info-box">
+        <strong>🛫 去程航班 (捷星 GK)</strong>
+        9/14 14:00 高雄 (KHH) $\rightarrow$ 18:30 成田 (NRT)<br>
+        <span class="badge badge-amber">手提 7kg (無託運) NT$ 3,398</span>
+      </div>
+      <div class="info-box">
+        <strong>🛬 回程航班 (長榮 BR)</strong>
+        9/17 12:45 成田 (NRT) $\rightarrow$ 15:40 高雄 (KHH)<br>
+        <span class="badge badge-green">含 23kg 託運 42,730日圓</span>
+      </div>
+      <div class="info-box">
+        <strong>📦 核心目標</strong>
+        猛建樂 24 週份 (5mg×8 + 2.5mg×16)<br>
+        <span class="badge badge-blue">84,200 日圓 (原盒手提)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 每日詳細行程 -->
+  <div class="card">
+    <div class="card-title">🗓️ 每日行程規劃</div>
+
+    <!-- Day 1 -->
+    <div class="day-block">
+      <div class="day-header">Day 1 ｜ 9/14 (一) ：抵達東京・一人友善晚餐</div>
+      <div class="timeline-item">
+        <div class="timeline-time">14:00 - 18:30</div>
+        <div class="timeline-content">搭乘捷星航班飛抵成田機場 (NRT)</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">19:00 - 20:30</div>
+        <div class="timeline-content">搭乘 Skyliner 直達京成上野站（約 41 分鐘），步行入住 APA 飯店</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">20:30 之後</div>
+        <div class="timeline-content">上野一人友善晚餐（免開口）：一蘭拉麵（隔板座） / 敘敘苑燒肉（單人席） / 食券機拉麵店</div>
+        <div class="timeline-sub">順便至唐吉訶德或百圓店購買保冷劑，交由 APA 櫃檯代凍。</div>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-block">
+      <div class="day-header">Day 2 ｜ 9/15 (二) ：上野取件・新宿茅乃舍・大塚代購</div>
+      <div class="timeline-item">
+        <div class="timeline-time">09:30 - 10:30</div>
+        <div class="timeline-content">前往指定據點領取冷藏包裹（攜帶護照＋單號截圖＋自備保冷袋）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">10:30 - 11:30</div>
+        <div class="timeline-content">帶回飯店放入冷藏蔬果室/中層（務必確認冰箱開關為 ON）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">12:00 - 16:30</div>
+        <div class="timeline-content">搭山手線前往<strong>新宿</strong>：至高島屋 B1 / Lumine 購買<strong>茅乃舍</strong>（高湯包、沾醬）、伊勢丹吃甜點放空</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">17:00 - 18:30</div>
+        <div class="timeline-content">搭山手線至<strong>大塚站</strong>完成朋友代購任務</div>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-block">
+      <div class="day-header">Day 3 ｜ 9/16 (三) ：鎌倉・江之島蔚藍海景一日遊</div>
+      <div class="timeline-item">
+        <div class="timeline-time">08:30 - 09:30</div>
+        <div class="timeline-content">JR 上野站搭「上野東京線」直達 JR 鎌倉站（約 55 分）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">09:30 - 12:30</div>
+        <div class="timeline-content">鎌倉小町通漫步、長谷寺遠眺海景、吃抹茶甜點</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">12:30 - 17:30</div>
+        <div class="timeline-content">搭乘復古「江之電」沿湘南海岸看海，登上江之島海景露台咖啡廳放空、看夕陽</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">18:00 - 20:30</div>
+        <div class="timeline-content">搭車返回市區，於 3COINS 購買大收納袋，回飯店整理託運行李與加固</div>
+      </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day-block">
+      <div class="day-header">Day 4 ｜ 9/17 (四) ：安心打包・搭機返台</div>
+      <div class="timeline-item">
+        <div class="timeline-time">08:30 - 09:30</div>
+        <div class="timeline-content">退房並向櫃檯領取結冰保冷劑，整齊排入好市多保冷袋（保冷劑包毛巾防凍）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">09:40 - 10:30</div>
+        <div class="timeline-content">京成上野搭 Skyliner 直達成田機場第二航廈</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">10:30 - 12:45</div>
+        <div class="timeline-content">長榮櫃檯報到：3COINS 大袋子<strong>託運</strong>、好市多保冷袋<strong>隨身手提上機</strong></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">12:45 - 15:40</div>
+        <div class="timeline-content">長榮 BR 航班起飛 $\rightarrow$ 15:40 抵達高雄小港機場，傍晚輕鬆回到台南/南科</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 行李與藥品溫控指南 -->
+  <div class="card">
+    <div class="card-title">⚠️ 打包與藥品溫控重點</div>
+    <ul>
+      <li><strong>原盒手提隨身</strong>：24 盒猛建樂原盒放入好市多保冷袋隨身登機，絕對不可託運（防貨艙低溫結冰）。</li>
+      <li><strong>防局部凍傷</strong>：結冰保冷劑表面務必包裹毛巾/氣泡紙，勿直接緊貼紙盒。</li>
+      <li><strong>安檢出示</strong>：隨身攜帶診所收據/明細，遇問詢告知「Medical use（医薬品）」。</li>
+      <li><strong>3COINS 袋加固</strong>：拉鍊頭以束線帶（紮帶）固定綁緊，外層加扣十字行李束帶。</li>
+      <li><strong>APA 冰箱確認</strong>：入住進房後務必手動確認房間冰箱電源已切至 ON。</li>
+    </ul>
+  </div>
+
+  <!-- 總預算表 -->
+  <div class="card">
+    <div class="card-title">💰 總預算估算表 (匯率約 0.21)</div>
+    <table>
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th>內容說明</th>
+          <th>預估金額 (NTD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>住宿 (4天3夜)</td>
+          <td>APA Hotel Ueno Ekiminami</td>
+          <td>NT$ 7,083</td>
+        </tr>
+        <tr>
+          <td>去程機票</td>
+          <td>捷星 GK (高雄 $\rightarrow$ 成田 / 手提 7kg)</td>
+          <td>NT$ 3,398</td>
+        </tr>
+        <tr>
+          <td>回程機票</td>
+          <td>長榮 BR (成田 $\rightarrow$ 高雄 / 含 23kg 託運)</td>
+          <td>約 NT$ 8,973</td>
+        </tr>
+        <tr>
+          <td>核心藥品</td>
+          <td>猛建樂 24 週份 (84,200 日圓)</td>
+          <td>約 NT$ 17,682</td>
+        </tr>
+        <tr>
+          <td>當地交通</td>
+          <td>Skyliner 來回 + 鎌倉江之島 + 市區車資</td>
+          <td>約 NT$ 1,680</td>
+        </tr>
+        <tr>
+          <td>餐飲與雜支</td>
+          <td>4 天餐費、海景咖啡、3COINS 收納袋</td>
+          <td>約 NT$ 3,150</td>
+        </tr>
+        <tr style="font-weight: 700; background-color: #f1f5f9;">
+          <td>總計預算</td>
+          <td>機票 + 住宿 + 全套藥品 + 交通餐飲</td>
+          <td>約 NT$ 41,966</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>© 2026 Tokyo Solo Trip Memo ｜ 祝旅途順利・平安達標</p>
+  </footer>
+</div>
+
+</body>
+</html>
