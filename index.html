@@ -23,6 +23,8 @@
       --amber-text: #fde68a;
       --blue-bg: #0c4a6e;
       --blue-text: #7dd3fc;
+      --purple-bg: #3b0764;
+      --purple-text: #d8b4fe;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -69,7 +71,6 @@
       padding-bottom: 10px;
     }
     
-    /* 航班與核心概覽網格 */
     .info-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -93,11 +94,11 @@
     .badge-blue { background: var(--blue-bg); color: var(--blue-text); border: 1px solid #0369a1; }
     .badge-green { background: var(--success-bg); color: var(--success-text); border: 1px solid #047857; }
     .badge-amber { background: var(--amber-bg); color: var(--amber-text); border: 1px solid #b45309; }
+    .badge-purple { background: var(--purple-bg); color: var(--purple-text); border: 1px solid #7e22ce; }
 
     /* 行程時間軸 */
     .day-block { margin-bottom: 20px; }
     .day-header {
-      background: #1e293b;
       color: var(--primary);
       font-weight: 700;
       padding: 10px 14px;
@@ -128,7 +129,18 @@
     .timeline-content { font-size: 0.96rem; color: var(--text-white); }
     .timeline-sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
 
-    /* 預算表格 */
+    /* 診所備案資訊框 */
+    .clinic-box {
+      background: #1e1b4b;
+      border: 1px solid #4338ca;
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 8px;
+    }
+    .clinic-box h4 { color: #a5b4fc; margin-bottom: 8px; font-size: 1.05rem; }
+    .clinic-detail { font-size: 0.9rem; margin-bottom: 4px; }
+
+    /* 表格樣式 */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -215,25 +227,26 @@
       </div>
       <div class="timeline-item">
         <div class="timeline-time">20:30 之後</div>
-        <div class="timeline-content">上野一人友善晚餐（免開口）：一蘭拉麵（獨立隔板座） / 敘敘苑燒肉（單人席） / 食券機拉麵店</div>
+        <div class="timeline-content">上野一人友善晚餐（免開口）：一蘭拉麵（隔板座） / 敘敘苑燒肉（單人席） / 食券機拉麵店</div>
         <div class="timeline-sub">順便至唐吉訶德或百圓店購買保冷劑，交由 APA 櫃檯代凍。</div>
       </div>
     </div>
 
     <!-- Day 2 -->
     <div class="day-block">
-      <div class="day-header">Day 2 ｜ 9/15 (二) ：上野取件・新宿茅乃舍・大塚代購</div>
+      <div class="day-header">Day 2 ｜ 9/15 (二) ：上野取件・新宿茅乃舍・大塚代購（可備案澀谷）</div>
       <div class="timeline-item">
         <div class="timeline-time">09:30 - 10:30</div>
         <div class="timeline-content">前往指定據點領取冷藏包裹（攜帶護照＋單號截圖＋自備保冷袋）</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">10:30 - 11:30</div>
-        <div class="timeline-content">帶回飯店放入冷藏蔬果室/中層（務必手動確認房內冰箱電源已切至 ON）</div>
+        <div class="timeline-content">帶回飯店放入冷藏蔬果室/中層（務必確認房間冰箱電源已切至 ON）</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">12:00 - 16:30</div>
         <div class="timeline-content">搭山手線前往<strong>新宿</strong>：至高島屋 B1 / Lumine 購買<strong>茅乃舍</strong>（高湯包、沾醬）、伊勢丹吃甜點放空</div>
+        <div class="timeline-sub">💡 若上野取件有變卦，此時段可順路至澀谷木村診所 Walk-in 看診取藥。</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">17:00 - 18:30</div>
@@ -280,6 +293,25 @@
       <div class="timeline-item">
         <div class="timeline-time">12:45 - 15:40</div>
         <div class="timeline-content">長榮 BR 航班起飛 → 15:40 抵達高雄小港機場，傍晚輕鬆回到台南/南科</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 緊急備案診所資訊 -->
+  <div class="card">
+    <div class="card-title">🏥 Walk-in 備案診所資訊</div>
+    <div class="clinic-box">
+      <h4>渋谷きむらクリニック（泌尿器科・皮膚科・内科）</h4>
+      <div class="clinic-detail">📍 <strong>地址</strong>：東京都渋谷区渋谷1-14-14 植村ビル5F（澀谷站宮益坂口 / B3 出口步行 1~2 分）</div>
+      <div class="clinic-detail">🕒 <strong>看診時間</strong>：</div>
+      <div class="clinic-detail" style="padding-left: 15px;">
+        • <strong>週一、週二、週三、週五</strong>：11:00 ～ 14:00 ｜ 16:00 ～ 19:30<br>
+        • <strong>週六</strong>：10:00 ～ 13:00 ｜ 14:30 ～ 17:00<br>
+        • <strong>休診日</strong>：週四、週日、國定假日
+      </div>
+      <div class="clinic-detail" style="margin-top: 6px;">
+        <span class="badge badge-purple">初診帶護照即可</span>
+        <span class="badge badge-blue">免預約 Walk-in OK</span>
       </div>
     </div>
   </div>
