@@ -6,16 +6,23 @@
   <title>2026 東京 4天3夜 獨旅行程備忘錄</title>
   <style>
     :root {
-      --primary: #1e3a8a;
-      --primary-light: #3b82f6;
-      --bg: #f8fafc;
-      --card-bg: #ffffff;
-      --text: #334155;
-      --text-dark: #0f172a;
-      --accent: #0284c7;
-      --border: #e2e8f0;
-      --success: #10b981;
-      --warning: #f59e0b;
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --card-sub: #334155;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --text-white: #f8fafc;
+      --primary: #38bdf8;
+      --primary-dark: #0284c7;
+      --accent: #818cf8;
+      --border: #334155;
+      --border-light: #475569;
+      --success-bg: #064e3b;
+      --success-text: #6ee7b7;
+      --amber-bg: #78350f;
+      --amber-text: #fde68a;
+      --blue-bg: #0c4a6e;
+      --blue-text: #7dd3fc;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -23,131 +30,136 @@
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      padding: 20px 12px;
+      padding: 24px 12px;
     }
     .container {
       max-width: 860px;
       margin: 0 auto;
     }
     header {
-      background: linear-gradient(135deg, #1e3a8a, #0284c7);
+      background: linear-gradient(135deg, #1e3a8a, #0f766e);
       color: white;
-      padding: 28px 20px;
+      padding: 30px 20px;
       border-radius: 16px;
       text-align: center;
       margin-bottom: 24px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      border: 1px solid var(--border-light);
     }
-    header h1 { font-size: 1.7rem; margin-bottom: 8px; font-weight: 700; }
-    header p { font-size: 0.95rem; opacity: 0.9; }
+    header h1 { font-size: 1.75rem; margin-bottom: 8px; font-weight: 700; color: var(--text-white); }
+    header p { font-size: 0.95rem; opacity: 0.9; color: #cbd5e1; }
     
     .card {
       background: var(--card-bg);
       border-radius: 14px;
-      padding: 20px;
+      padding: 22px;
       margin-bottom: 20px;
       border: 1px solid var(--border);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
     .card-title {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 700;
       color: var(--primary);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
       gap: 8px;
-      border-bottom: 2px solid #f1f5f9;
-      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
     }
     
-    /* 航班與住宿快速資訊 */
+    /* 航班與核心概覽網格 */
     .info-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
     }
     .info-box {
-      background: #f8fafc;
+      background: #182234;
       border: 1px solid var(--border);
-      padding: 12px 14px;
+      padding: 14px 16px;
       border-radius: 10px;
     }
-    .info-box strong { color: var(--text-dark); display: block; margin-bottom: 4px; }
+    .info-box strong { color: var(--text-white); display: block; margin-bottom: 6px; font-size: 1rem; }
     .badge {
       display: inline-block;
       font-size: 0.75rem;
-      padding: 2px 8px;
+      padding: 3px 10px;
       border-radius: 6px;
       font-weight: 600;
-      margin-top: 4px;
+      margin-top: 6px;
     }
-    .badge-blue { background: #e0f2fe; color: #0369a1; }
-    .badge-green { background: #dcfce7; color: #15803d; }
-    .badge-amber { background: #fef3c7; color: #b45309; }
+    .badge-blue { background: var(--blue-bg); color: var(--blue-text); border: 1px solid #0369a1; }
+    .badge-green { background: var(--success-bg); color: var(--success-text); border: 1px solid #047857; }
+    .badge-amber { background: var(--amber-bg); color: var(--amber-text); border: 1px solid #b45309; }
 
     /* 行程時間軸 */
-    .day-block { margin-bottom: 18px; }
+    .day-block { margin-bottom: 20px; }
     .day-header {
-      background: #eff6ff;
+      background: #1e293b;
       color: var(--primary);
       font-weight: 700;
-      padding: 8px 12px;
+      padding: 10px 14px;
       border-radius: 8px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       font-size: 1.05rem;
+      border-left: 4px solid var(--primary);
+      background: #172554;
     }
     .timeline-item {
-      padding: 8px 0 8px 12px;
-      border-left: 3px solid var(--primary-light);
-      margin-left: 8px;
+      padding: 10px 0 10px 16px;
+      border-left: 2px solid var(--border-light);
+      margin-left: 12px;
       position: relative;
     }
     .timeline-item::before {
       content: "";
       position: absolute;
-      left: -7px;
-      top: 14px;
-      width: 11px;
-      height: 11px;
+      left: -6px;
+      top: 17px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
-      background: var(--primary-light);
+      background: var(--primary);
+      box-shadow: 0 0 8px var(--primary);
     }
-    .timeline-time { font-weight: 700; color: var(--accent); font-size: 0.9rem; }
-    .timeline-content { font-size: 0.95rem; margin-top: 2px; }
-    .timeline-sub { font-size: 0.85rem; color: #64748b; margin-top: 4px; }
+    .timeline-time { font-weight: 700; color: var(--accent); font-size: 0.9rem; margin-bottom: 2px; }
+    .timeline-content { font-size: 0.96rem; color: var(--text-white); }
+    .timeline-sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
 
-    /* 表格樣式 */
+    /* 預算表格 */
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 8px;
-      font-size: 0.9rem;
+      margin-top: 10px;
+      font-size: 0.92rem;
     }
     th, td {
-      padding: 10px 12px;
+      padding: 12px 14px;
       text-align: left;
       border-bottom: 1px solid var(--border);
     }
-    th { background: #f8fafc; color: var(--text-dark); font-weight: 600; }
+    th { background: #182234; color: var(--text-white); font-weight: 600; }
+    td { color: var(--text); }
     
-    /* 清單與提醒 */
+    /* 清單樣式 */
     ul { list-style: none; padding-left: 0; }
-    li { margin-bottom: 8px; position: relative; padding-left: 20px; font-size: 0.93rem; }
+    li { margin-bottom: 10px; position: relative; padding-left: 24px; font-size: 0.95rem; }
     li::before {
       content: "✔";
       position: absolute;
       left: 0;
-      color: var(--success);
+      color: #34d399;
       font-weight: bold;
     }
-    .warning-li::before { content: "⚠️"; color: var(--warning); }
 
     footer {
       text-align: center;
-      font-size: 0.8rem;
-      color: #94a3b8;
-      margin-top: 30px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 36px;
+      padding-bottom: 10px;
     }
   </style>
 </head>
@@ -170,18 +182,18 @@
       </div>
       <div class="info-box">
         <strong>🛫 去程航班 (捷星 GK)</strong>
-        9/14 14:00 高雄 (KHH) $\rightarrow$ 18:30 成田 (NRT)<br>
+        9/14 14:00 高雄 (KHH) → 18:30 成田 (NRT)<br>
         <span class="badge badge-amber">手提 7kg (無託運) NT$ 3,398</span>
       </div>
       <div class="info-box">
         <strong>🛬 回程航班 (長榮 BR)</strong>
-        9/17 12:45 成田 (NRT) $\rightarrow$ 15:40 高雄 (KHH)<br>
+        9/17 12:45 成田 (NRT) → 15:40 高雄 (KHH)<br>
         <span class="badge badge-green">含 23kg 託運 42,730日圓</span>
       </div>
       <div class="info-box">
         <strong>📦 核心目標</strong>
         猛建樂 24 週份 (5mg×8 + 2.5mg×16)<br>
-        <span class="badge badge-blue">84,200 日圓 (原盒手提)</span>
+        <span class="badge badge-blue">84,200 日圓 (原盒手提隨身)</span>
       </div>
     </div>
   </div>
@@ -195,7 +207,7 @@
       <div class="day-header">Day 1 ｜ 9/14 (一) ：抵達東京・一人友善晚餐</div>
       <div class="timeline-item">
         <div class="timeline-time">14:00 - 18:30</div>
-        <div class="timeline-content">搭乘捷星航班飛抵成田機場 (NRT)</div>
+        <div class="timeline-content">搭乘捷星航空飛抵成田機場 (NRT)</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">19:00 - 20:30</div>
@@ -203,7 +215,7 @@
       </div>
       <div class="timeline-item">
         <div class="timeline-time">20:30 之後</div>
-        <div class="timeline-content">上野一人友善晚餐（免開口）：一蘭拉麵（隔板座） / 敘敘苑燒肉（單人席） / 食券機拉麵店</div>
+        <div class="timeline-content">上野一人友善晚餐（免開口）：一蘭拉麵（獨立隔板座） / 敘敘苑燒肉（單人席） / 食券機拉麵店</div>
         <div class="timeline-sub">順便至唐吉訶德或百圓店購買保冷劑，交由 APA 櫃檯代凍。</div>
       </div>
     </div>
@@ -217,7 +229,7 @@
       </div>
       <div class="timeline-item">
         <div class="timeline-time">10:30 - 11:30</div>
-        <div class="timeline-content">帶回飯店放入冷藏蔬果室/中層（務必確認冰箱開關為 ON）</div>
+        <div class="timeline-content">帶回飯店放入冷藏蔬果室/中層（務必手動確認房內冰箱電源已切至 ON）</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">12:00 - 16:30</div>
@@ -225,7 +237,7 @@
       </div>
       <div class="timeline-item">
         <div class="timeline-time">17:00 - 18:30</div>
-        <div class="timeline-content">搭山手線至<strong>大塚站</strong>完成朋友代購任務</div>
+        <div class="timeline-content">搭山手線至<strong>大塚站</strong>完成朋友代購任務後返回飯店</div>
       </div>
     </div>
 
@@ -242,7 +254,7 @@
       </div>
       <div class="timeline-item">
         <div class="timeline-time">12:30 - 17:30</div>
-        <div class="timeline-content">搭乘復古「江之電」沿湘南海岸看海，登上江之島海景露台咖啡廳放空、看夕陽</div>
+        <div class="timeline-content">搭乘復古「江之電」沿湘南海岸看海，登上江之島海景露台咖啡廳放空、吹海風看夕陽</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">18:00 - 20:30</div>
@@ -255,7 +267,7 @@
       <div class="day-header">Day 4 ｜ 9/17 (四) ：安心打包・搭機返台</div>
       <div class="timeline-item">
         <div class="timeline-time">08:30 - 09:30</div>
-        <div class="timeline-content">退房並向櫃檯領取結冰保冷劑，整齊排入好市多保冷袋（保冷劑包毛巾防凍）</div>
+        <div class="timeline-content">退房並向櫃檯領取結冰保冷劑，整齊排入好市多保冷袋（保冷劑包毛巾防局部凍傷）</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">09:40 - 10:30</div>
@@ -267,7 +279,7 @@
       </div>
       <div class="timeline-item">
         <div class="timeline-time">12:45 - 15:40</div>
-        <div class="timeline-content">長榮 BR 航班起飛 $\rightarrow$ 15:40 抵達高雄小港機場，傍晚輕鬆回到台南/南科</div>
+        <div class="timeline-content">長榮 BR 航班起飛 → 15:40 抵達高雄小港機場，傍晚輕鬆回到台南/南科</div>
       </div>
     </div>
   </div>
@@ -303,12 +315,12 @@
         </tr>
         <tr>
           <td>去程機票</td>
-          <td>捷星 GK (高雄 $\rightarrow$ 成田 / 手提 7kg)</td>
+          <td>捷星 GK (高雄 → 成田 / 手提 7kg)</td>
           <td>NT$ 3,398</td>
         </tr>
         <tr>
           <td>回程機票</td>
-          <td>長榮 BR (成田 $\rightarrow$ 高雄 / 含 23kg 託運)</td>
+          <td>長榮 BR (成田 → 高雄 / 含 23kg 託運)</td>
           <td>約 NT$ 8,973</td>
         </tr>
         <tr>
@@ -326,10 +338,10 @@
           <td>4 天餐費、海景咖啡、3COINS 收納袋</td>
           <td>約 NT$ 3,150</td>
         </tr>
-        <tr style="font-weight: 700; background-color: #f1f5f9;">
-          <td>總計預算</td>
-          <td>機票 + 住宿 + 全套藥品 + 交通餐飲</td>
-          <td>約 NT$ 41,966</td>
+        <tr style="font-weight: 700; background-color: #172554;">
+          <td style="color: var(--primary);">總計預算</td>
+          <td style="color: var(--primary);">機票 + 住宿 + 全套藥品 + 交通餐飲</td>
+          <td style="color: #38bdf8;">約 NT$ 41,966</td>
         </tr>
       </tbody>
     </table>
