@@ -96,6 +96,22 @@
     .badge-amber { background: var(--amber-bg); color: var(--amber-text); border: 1px solid #b45309; }
     .badge-purple { background: var(--purple-bg); color: var(--purple-text); border: 1px solid #7e22ce; }
 
+    /* VJW 填表專用區塊 */
+    .vjw-card {
+      background: #172554;
+      border: 1px solid #2563eb;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+    .vjw-card h4 { color: #93c5fd; font-size: 1.05rem; margin-bottom: 10px; }
+    .vjw-item { display: flex; flex-direction: column; margin-bottom: 8px; font-size: 0.92rem; }
+    @media(min-width: 600px) {
+      .vjw-item { flex-direction: row; justify-content: space-between; }
+    }
+    .vjw-label { color: #94a3b8; font-weight: 600; }
+    .vjw-val { color: #f8fafc; font-family: monospace; font-size: 0.98rem; }
+
     /* 行程時間軸 */
     .day-block { margin-bottom: 20px; }
     .day-header {
@@ -183,24 +199,55 @@
     <p>2026.09.14 (一) ～ 2026.09.17 (四) ｜ 藥品代收・海景放鬆・新宿代購</p>
   </header>
 
-  <!-- 快速概覽卡片 -->
+  <!-- 填寫入境表專用快速查閱區 -->
   <div class="card">
-    <div class="card-title">📌 旅程核心資訊</div>
+    <div class="card-title">📝 Visit Japan Web (VJW) 入境填報必備資料</div>
+    <div class="vjw-card">
+      <h4>📍 日本停留地點與聯絡處</h4>
+      <div class="vjw-item">
+        <span class="vjw-label">住宿名稱 (Hotel Name)</span>
+        <span class="vjw-val">APA Hotel Ueno Ekiminami</span>
+      </div>
+      <div class="vjw-item">
+        <span class="vjw-label">郵遞區號 (Postal Code)</span>
+        <span class="vjw-val">110-0005</span>
+      </div>
+      <div class="vjw-item">
+        <span class="vjw-label">都道府縣 / 市區町 (Address)</span>
+        <span class="vjw-val">東京都台東区上野6-7-21 (6-7-21, Ueno, Taito-ku)</span>
+      </div>
+      <div class="vjw-item">
+        <span class="vjw-label">聯絡電話 (Phone)</span>
+        <span class="vjw-val">+81 570-020-711 (或 03-5807-7111)</span>
+      </div>
+      <div class="vjw-item" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed #3b82f6;">
+        <span class="vjw-label">去程航班號 (Flight No.)</span>
+        <span class="vjw-val">GK18 (捷星航空 Jetstar Japan)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 旅程核心資訊卡片 -->
+  <div class="card">
+    <div class="card-title">📌 航班與住宿細節</div>
     <div class="info-grid">
       <div class="info-box">
         <strong>🏨 住宿飯店</strong>
         APA Hotel Ueno Ekiminami (上野駅南)<br>
+        <span style="font-size: 0.85rem; color: #94a3b8;">東京都台東区上野6-7-21</span><br>
         <span class="badge badge-blue">4天3夜 NT$ 7,083</span>
       </div>
       <div class="info-box">
-        <strong>🛫 去程航班 (捷星 GK)</strong>
+        <strong>🛫 去程航班 (捷星 GK18)</strong>
+        訂票代碼：<strong>IVM5SR</strong> ｜ A320-200<br>
         9/14 14:00 高雄 (KHH) → 18:30 成田 (NRT)<br>
-        <span class="badge badge-amber">手提 7kg (無託運) NT$ 3,398</span>
+        <span class="badge badge-amber">手提 7kg (含稅費結帳) NT$ 4,073</span>
       </div>
       <div class="info-box">
-        <strong>🛬 回程航班 (長榮 BR)</strong>
-        9/17 12:45 成田 (NRT) → 15:40 高雄 (KHH)<br>
-        <span class="badge badge-green">含 23kg 託運 42,730日圓</span>
+        <strong>🛬 回程航班 (長榮 BR107)</strong>
+        訂位代號：<strong>E6ALJC</strong><br>
+        9/17 12:45 成田 <strong>T1航廈</strong> → 15:40 高雄 <strong>T1航廈</strong><br>
+        <span class="badge badge-green">含 23kg 託運 (實刷) NT$ 8,568</span>
       </div>
       <div class="info-box">
         <strong>📦 核心目標</strong>
@@ -208,6 +255,18 @@
         <span class="badge badge-blue">84,200 日圓 (原盒手提隨身)</span>
       </div>
     </div>
+  </div>
+
+  <!-- 出發前必備待辦清單 -->
+  <div class="card">
+    <div class="card-title">📋 出發前準備 Checklist</div>
+    <ul>
+      <li><strong>日本 eSIM 網卡</strong>：選購 Docomo/SoftBank 原生線路，出發前加入手機設定。</li>
+      <li><strong>旅遊平安險 + 不便險</strong>：務必加保含「班機延誤」與「海外突發醫療」之產險方案。</li>
+      <li><strong>Visit Japan Web 填寫</strong>：出發前 1~3 天填好入境審查與海關申報，將 QR Code 截圖存入相簿。</li>
+      <li><strong>Apple 錢包綁定 Suica/PASMO</strong>：手機直接儲值日幣，搭乘電車超商感應超快速。</li>
+      <li><strong>保冷包裝備</strong>：好市多保冷袋 + 束線帶（紮帶） + 十字行李束帶備妥隨身。</li>
+    </ul>
   </div>
 
   <!-- 每日詳細行程 -->
@@ -219,11 +278,11 @@
       <div class="day-header">Day 1 ｜ 9/14 (一) ：抵達東京・一人友善晚餐</div>
       <div class="timeline-item">
         <div class="timeline-time">14:00 - 18:30</div>
-        <div class="timeline-content">搭乘捷星航空飛抵成田機場 (NRT)</div>
+        <div class="timeline-content">搭乘捷星 GK18 飛抵成田機場 (NRT)</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">19:00 - 20:30</div>
-        <div class="timeline-content">搭乘 Skyliner 直達京成上野站（約 41 分鐘），步行入住 APA 飯店</div>
+        <div class="timeline-content">搭乘 Skyliner 直達京成上野站（約 41 分鐘），步行入住 APA Hotel Ueno Ekiminami</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">20:30 之後</div>
@@ -284,15 +343,15 @@
       </div>
       <div class="timeline-item">
         <div class="timeline-time">09:40 - 10:30</div>
-        <div class="timeline-content">京成上野搭 Skyliner 直達成田機場第二航廈</div>
+        <div class="timeline-content">京成上野搭 Skyliner 直達成田機場<strong>第一航廈（終點站）</strong></div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">10:30 - 12:45</div>
-        <div class="timeline-content">長榮櫃檯報到：3COINS 大袋子<strong>託運</strong>、好市多保冷袋<strong>隨身手提上機</strong></div>
+        <div class="timeline-content">長榮櫃檯（T1 南翼 I 櫃檯）報到：3COINS 大袋子<strong>託運</strong>、好市多保冷袋<strong>隨身手提上機</strong></div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">12:45 - 15:40</div>
-        <div class="timeline-content">長榮 BR 航班起飛 → 15:40 抵達高雄小港機場，傍晚輕鬆回到台南/南科</div>
+        <div class="timeline-content">長榮 BR107 航班起飛 → 15:40 抵達高雄小港機場第一航廈，傍晚輕鬆回到台南/南科</div>
       </div>
     </div>
   </div>
@@ -330,13 +389,13 @@
 
   <!-- 總預算表 -->
   <div class="card">
-    <div class="card-title">💰 總預算估算表 (匯率約 0.21)</div>
+    <div class="card-title">💰 總預算實算表 (匯率約 0.21)</div>
     <table>
       <thead>
         <tr>
           <th>項目</th>
           <th>內容說明</th>
-          <th>預估金額 (NTD)</th>
+          <th>實際/預估金額 (NTD)</th>
         </tr>
       </thead>
       <tbody>
@@ -347,13 +406,13 @@
         </tr>
         <tr>
           <td>去程機票</td>
-          <td>捷星 GK (高雄 → 成田 / 手提 7kg)</td>
-          <td>NT$ 3,398</td>
+          <td>捷星 GK18 (訂位碼 IVM5SR / 含稅與手續費實刷)</td>
+          <td>NT$ 4,073</td>
         </tr>
         <tr>
           <td>回程機票</td>
-          <td>長榮 BR (成田 → 高雄 / 含 23kg 託運)</td>
-          <td>約 NT$ 8,973</td>
+          <td>長榮 BR107 (訂位碼 E6ALJC / 含 23kg 託運實刷)</td>
+          <td>NT$ 8,568</td>
         </tr>
         <tr>
           <td>核心藥品</td>
@@ -373,7 +432,7 @@
         <tr style="font-weight: 700; background-color: #172554;">
           <td style="color: var(--primary);">總計預算</td>
           <td style="color: var(--primary);">機票 + 住宿 + 全套藥品 + 交通餐飲</td>
-          <td style="color: #38bdf8;">約 NT$ 41,966</td>
+          <td style="color: #38bdf8;">約 NT$ 42,236</td>
         </tr>
       </tbody>
     </table>
