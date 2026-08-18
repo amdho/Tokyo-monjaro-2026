@@ -145,16 +145,18 @@
     .timeline-content { font-size: 0.96rem; color: var(--text-white); }
     .timeline-sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
 
-    /* 診所備案資訊框 */
-    .clinic-box {
+    /* 預約專用資訊卡片 */
+    .reserve-box {
       background: #1e1b4b;
       border: 1px solid #4338ca;
       border-radius: 10px;
       padding: 16px;
-      margin-top: 8px;
+      margin-top: 10px;
     }
-    .clinic-box h4 { color: #a5b4fc; margin-bottom: 8px; font-size: 1.05rem; }
-    .clinic-detail { font-size: 0.9rem; margin-bottom: 4px; }
+    .reserve-box h4 { color: #a5b4fc; margin-bottom: 8px; font-size: 1.05rem; }
+    .reserve-detail { font-size: 0.9rem; margin-bottom: 4px; }
+    .reserve-link { color: #38bdf8; text-decoration: none; word-break: break-all; }
+    .reserve-link:hover { text-decoration: underline; }
 
     /* 表格樣式 */
     table {
@@ -196,7 +198,7 @@
 <div class="container">
   <header>
     <h1>✈️ 東京 4天3夜 獨旅行程</h1>
-    <p>2026.09.14 (一) ～ 2026.09.17 (四) ｜ 藥品代收・海景放鬆・新宿採購</p>
+    <p>2026.09.14 (一) ～ 2026.09.17 (四) ｜ 藥品代收・海景放鬆・新宿採購美髮</p>
   </header>
 
   <!-- 填寫入境表專用快速查閱區 -->
@@ -282,59 +284,69 @@
       </div>
       <div class="timeline-item">
         <div class="timeline-time">18:30 - 20:30</div>
-        <div class="timeline-content">搭乘 T3 免費航廈接駁車至 <strong>T2（機場第2大樓站）</strong>，搭乘 Skyliner 直達京成上野站，步行入住 APA 飯店</div>
+        <div class="timeline-content">搭乘 T3 免費接駁車至 <strong>T2（機場第2大樓站）</strong>，搭乘 Skyliner 直達京成上野站</div>
+        <div class="timeline-sub">
+          🚆 <strong>推薦班次（Skyliner 68 號）</strong>：<strong>19:43</strong> (T2發車) → <strong>20:24</strong> (抵達京成上野)<br>
+          （備案班次：19:24 發車 / 20:04 發車，車程約 41 分鐘）
+        </div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">20:30 之後</div>
-        <div class="timeline-content">進房第一步：<strong>手動確認房間冰箱電源開關已切至 ON</strong></div>
+        <div class="timeline-content">步行入住 APA 飯店，進房第一步：<strong>手動確認房間冰箱電源開關已切至 ON</strong></div>
         <div class="timeline-sub">晚餐選擇：敘敘苑燒肉（單人席景觀位）/ 上野百貨美食街定食外帶 / 超商精緻熟食。<br>順路至唐吉訶德或百圓店購買保冷劑，交由 APA 櫃檯代凍。</div>
       </div>
     </div>
 
     <!-- Day 2 -->
     <div class="day-block">
-      <div class="day-header">Day 2 ｜ 9/15 (二) ：上野取件・新宿採購・大塚代購</div>
+      <div class="day-header">Day 2 ｜ 9/15 (二) ：上野取件・鎌倉・江之島蔚藍海景一日遊</div>
       <div class="timeline-item">
         <div class="timeline-time">09:30 - 10:30</div>
         <div class="timeline-content">前往指定據點領取冷藏包裹（攜帶護照＋單號截圖＋自備保冷袋）</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">10:30 - 11:30</div>
-        <div class="timeline-content">帶回飯店放入冷藏中層冷卻存放</div>
+        <div class="timeline-content">帶回飯店放入冷藏中層冷卻存放（大事提早落袋為安）</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-time">12:00 - 18:00</div>
-        <div class="timeline-content">搭山手線前往<strong>新宿採購與逛街</strong>：</div>
-        <div class="timeline-sub">
-          • <strong>高島屋 B1 / Lumine 1</strong>：購買<strong>茅乃舍</strong>（自用高湯包、調味醬 ＆ <strong>記得加買新人新婚禮盒組</strong>）<br>
-          • <strong>Lumine Est</strong>：<strong>SHIRO (B1)</strong> 購買香氛/護手霜 ＆ <strong>3COINS (3F)</strong> 買託運收納大袋<br>
-          • <strong>伊勢丹百貨 B1</strong>：購買頂級<strong>常溫費南雪 / 瑪德蓮</strong>（Échiré 艾許奶油 / noix de beurre 焦糖費南雪盒裝，帶回台灣分享朋友）
-        </div>
+        <div class="timeline-time">11:30 - 13:00</div>
+        <div class="timeline-content">JR 上野站搭「上野東京線」直達 JR 鎌倉站（約 55 分）</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-time">18:00 - 19:30</div>
-        <div class="timeline-content">搭山手線至<strong>大塚站</strong>完成朋友代購任務後返回飯店</div>
+        <div class="timeline-time">13:00 - 17:30</div>
+        <div class="timeline-content">鎌倉小町通漫步、搭乘復古「江之電」沿湘南海岸看海，登上江之島海景露台咖啡廳放空、吹海風看夕陽</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">18:00 之後</div>
+        <div class="timeline-content">搭車返回上野市區，輕鬆享用晚餐與休息</div>
       </div>
     </div>
 
     <!-- Day 3 -->
     <div class="day-block">
-      <div class="day-header">Day 3 ｜ 9/16 (三) ：鎌倉・江之島蔚藍海景一日遊</div>
+      <div class="day-header">Day 3 ｜ 9/16 (三) ：新宿採購・池袋美髮沙龍・大塚 ba05 代購・回飯店打包</div>
       <div class="timeline-item">
-        <div class="timeline-time">08:30 - 09:30</div>
-        <div class="timeline-content">JR 上野站搭「上野東京線」直達 JR 鎌倉站（約 55 分）</div>
+        <div class="timeline-time">12:00 - 17:30</div>
+        <div class="timeline-content">搭山手線前往<strong>新宿採購與逛街</strong>：</div>
+        <div class="timeline-sub">
+          • <strong>高島屋 B1 / Lumine 1</strong>：購買<strong>茅乃舍</strong>（自用高湯包、調味醬 ＆ <strong>記得加買新人新婚禮盒組</strong>）<br>
+          • <strong>Lumine Est</strong>：<strong>SHIRO (B1)</strong> 購買香氛/護手霜 ＆ <strong>3COINS (3F)</strong> 買託運收納大袋<br>
+          • <strong>伊勢丹百貨 B1</strong>：購買頂級最新鮮<strong>常溫費南雪 / 瑪德蓮</strong>（Échiré 艾許奶油 / noix de beurre 焦糖費南雪盒裝，隔日帶回台灣分享朋友）<br>
+          💡 若藥品有任何備案需求，此時段亦可順路至澀谷木村診所 Walk-in 看診。
+        </div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-time">09:30 - 12:30</div>
-        <div class="timeline-content">鎌倉小町通漫步、長谷寺遠眺相模灣海景、吃抹茶甜點</div>
+        <div class="timeline-time">18:00 - 19:30</div>
+        <div class="timeline-content">搭山手線前往<strong>池袋（約 8 分）</strong>：<strong>SHE 池袋</strong> 剪髮＋TOKIO 護髮＋碳酸泉 Spa</div>
+        <div class="timeline-sub">預約番號：BF52192059 ｜ 指名設計師：あかり（現場出示 IG 髮型照片即可）</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-time">12:30 - 17:30</div>
-        <div class="timeline-content">搭乘復古「江之電」沿湘南海岸看海，登上江之島海景露台咖啡廳放空、吹海風看夕陽</div>
+        <div class="timeline-time">19:40 - 20:30</div>
+        <div class="timeline-content">池袋搭山手線 1 站直達<strong>大塚站（約 2 分）</strong>：前往北口 <strong>ba05 大樓</strong> 購買代購物品</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-time">18:00 - 20:30</div>
-        <div class="timeline-content">搭車返回上野飯店，將常溫戰利品整理至 3COINS 大袋中，完成拉鍊加固</div>
+        <div class="timeline-time">20:45 之後</div>
+        <div class="timeline-content">返回上野飯店，將常溫戰利品與伴手禮整理至 3COINS 大袋中，完成拉鍊加固與託運準備</div>
       </div>
     </div>
 
@@ -348,6 +360,10 @@
       <div class="timeline-item">
         <div class="timeline-time">09:40 - 10:30</div>
         <div class="timeline-content">京成上野搭 Skyliner 直達成田機場<strong>第一航廈（終點站）</strong></div>
+        <div class="timeline-sub">
+          🚆 <strong>推薦班次（Skyliner 25 號）</strong>：<strong>09:40</strong> (京成上野發車) → <strong>10:21</strong> (抵達第一航廈 T1)<br>
+          （備案班次：09:00 發車 / 10:00 發車，直達機場南翼報到櫃檯）
+        </div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">10:30 - 12:45</div>
@@ -356,6 +372,24 @@
       <div class="timeline-item">
         <div class="timeline-time">12:45 - 15:40</div>
         <div class="timeline-content">長榮 BR107 航班起飛 → 15:40 抵達高雄小港機場國際航廈，傍晚輕鬆回到台南/南科</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 美髮沙龍預約卡片 -->
+  <div class="card">
+    <div class="card-title">💇‍♀️ 9/16 美髮沙龍預約備忘</div>
+    <div class="reserve-box">
+      <h4>SHE 池袋 【シー イケブクロ】</h4>
+      <div class="reserve-detail">📌 <strong>預約番號</strong>：BF52192059</div>
+      <div class="reserve-detail">🕒 <strong>預約時間</strong>：2026.09.16 (三) 18:00（預計施作 1.5 小時）</div>
+      <div class="reserve-detail">✂️ <strong>指名設計師</strong>：あかり (Akari)</div>
+      <div class="reserve-detail">💆‍♀️ <strong>施作內容</strong>：剪髮 ＋ TOKIO/髮質改善護髮 ＋ 碳酸泉 Spa（現地付款 ¥10,230）</div>
+      <div class="reserve-detail">📞 <strong>電話</strong>：03-6907-2006</div>
+      <div class="reserve-detail">📍 <strong>地圖導航</strong>：<a class="reserve-link" href="https://maps.google.com/maps?q=35.73115477471936,139.70860320042672" target="_blank">Google Maps 點此開啟導航 ↗</a></div>
+      <div class="reserve-detail" style="margin-top: 6px;">
+        <span class="badge badge-purple">現場付款</span>
+        <span class="badge badge-blue">出示 IG 照片溝通</span>
       </div>
     </div>
   </div>
