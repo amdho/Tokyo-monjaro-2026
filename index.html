@@ -146,15 +146,15 @@
     .timeline-sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
 
     /* 預約/重要資訊卡片 */
-    .reserve-box {
+    .reserve-box, .clinic-box {
       background: #1e1b4b;
       border: 1px solid #4338ca;
       border-radius: 10px;
       padding: 16px;
       margin-top: 10px;
     }
-    .reserve-box h4 { color: #a5b4fc; margin-bottom: 8px; font-size: 1.05rem; }
-    .reserve-detail { font-size: 0.9rem; margin-bottom: 4px; }
+    .reserve-box h4, .clinic-box h4 { color: #a5b4fc; margin-bottom: 8px; font-size: 1.05rem; }
+    .reserve-detail, .clinic-detail { font-size: 0.9rem; margin-bottom: 4px; }
     .reserve-link { color: #38bdf8; text-decoration: none; word-break: break-all; }
     .reserve-link:hover { text-decoration: underline; }
 
@@ -198,7 +198,7 @@
 <div class="container">
   <header>
     <h1>✈️ 東京 4天3夜 獨旅行程</h1>
-    <p>2026.09.14 (一) ～ 2026.09.17 (四) ｜ 藥品領取・海景放鬆・新宿採購美髮</p>
+    <p>2026.09.14 (一) ～ 2026.09.17 (四) ｜ 藥品領取・森林散策・南青山美食・新宿採購美髮</p>
   </header>
 
   <!-- 填寫入境表專用快速查閱區 -->
@@ -294,7 +294,7 @@
         <div class="timeline-content">搭乘 T3 免費接駁車至 <strong>T2（機場第2大樓站）</strong>，搭乘 Skyliner 直達京成上野站</div>
         <div class="timeline-sub">
           🚆 <strong>推薦班次（Skyliner 68 號）</strong>：<strong>19:43</strong> (T2發車) → <strong>20:24</strong> (抵達京成上野)<br>
-          （備案班次：19:24 發車 / 20:04 發車，車程約 41 分鐘）
+          （備案班次：19:24 發車 / 20:04 發車，車程約 41 分鐘，現場售票機/臨櫃 2,580 日圓）
         </div>
       </div>
       <div class="timeline-item">
@@ -311,22 +311,42 @@
 
     <!-- Day 2 -->
     <div class="day-block">
-      <div class="day-header">Day 2 ｜ 9/15 (二) ：鎌倉・江之島蔚藍海景放鬆一日遊</div>
+      <div class="day-header">Day 2 ｜ 9/15 (二) ：明治神宮巨木散策・南青山生活選品・銀座ONODERA壽司・淺草寺點燈</div>
       <div class="timeline-item">
-        <div class="timeline-time">09:00 - 10:00</div>
-        <div class="timeline-content">JR 上野站搭車前往 JR 鎌倉站（車程約 55 分）</div>
+        <div class="timeline-time">09:30 - 10:00</div>
+        <div class="timeline-content">上野搭乘 <strong>JR 山手線（外環）</strong> 直達 <strong>原宿站</strong>（車程約 25 分，免換車）</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-time">10:00 - 13:00</div>
-        <div class="timeline-content">鎌倉小町通漫步、長谷寺遠眺相模灣蔚藍海景、品嚐抹茶甜點</div>
+        <div class="timeline-time">10:00 - 11:30</div>
+        <div class="timeline-content"><strong>明治神宮・巨木森林浴散步</strong>：漫步於 70 公頃綠意參道，看台灣巨木大鳥居與百年夫婦楠神木，吸收滿滿芬多精</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-time">13:00 - 17:30</div>
-        <div class="timeline-content">搭乘復古「江之電」沿湘南海岸看海，登上江之島海景露台咖啡廳放空、吹海風看夕陽</div>
+        <div class="timeline-time">11:40 - 12:40</div>
+        <div class="timeline-content">步行至表參道 <strong>GYRE 3F：MoMA Design Store Tokyo</strong> 挖寶創意生活小物與設計文具（可順逛 B1F HAY 家居）</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-time">18:00 之後</div>
-        <div class="timeline-content">搭車返回上野市區，享用舒適晚餐與充分休息</div>
+        <div class="timeline-time">12:45 - 13:30</div>
+        <div class="timeline-content">漫步至 <strong>SHIRO 表參道本店</strong>（獨立街邊旗艦店，空間開闊無推銷壓力，自主試聞全系列香氛與居家擴香）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">13:35 - 15:00</div>
+        <div class="timeline-content">走進南青山小巷：<strong>Aoyama Flower Market TEAHOUSE 南青山本店</strong>（在綠植與鮮花環繞的溫室花房享用新鮮草本茶、花園輕食或法式吐司）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">15:15 - 16:30</div>
+        <div class="timeline-content"><strong>迴轉鮨 銀座 ONODERA（表參道旗艦店）</strong>：離峰時段輕鬆入座，一人平板點餐享用米其林星級血統的現握壽司（推薦黑鮪魚大腹、海膽）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">16:45 - 17:20</div>
+        <div class="timeline-content">由「表參道站」搭乘 <strong>東京地鐵銀座線</strong> 直達終點 <strong>「淺草站」</strong>（車程 31 分鐘，一車到底免換線）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">17:30 - 18:45</div>
+        <div class="timeline-content"><strong>淺草寺・黃昏與夜間點燈漫步</strong>：避開白天團客尖峰，漫步於雷門、仲見世通與朱紅五重塔，拍出乾淨無路人的唯美夜景大片</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">19:00 之後</div>
+        <div class="timeline-content">淺草搭地鐵銀座線 <strong>5 分鐘（3 站）直達上野</strong>，回 APA 飯店泡澡、敷面膜、放空休息</div>
       </div>
     </div>
 
@@ -351,7 +371,7 @@
         <div class="timeline-content">時間充裕！搭山手線前往<strong>新宿採購與逛街</strong>：</div>
         <div class="timeline-sub">
           • <strong>高島屋 B1 / Lumine 1</strong>：購買<strong>茅乃舍</strong>（自用高湯包、調味醬 ＆ <strong>記得加買新人新婚禮盒組</strong>）<br>
-          • <strong>Lumine Est</strong>：<strong>SHIRO (B1)</strong> 購買香氛/護手霜 ＆ <strong>3COINS (3F)</strong> 買託運收納大袋<br>
+          • <strong>Lumine Est</strong>：<strong>3COINS (3F)</strong> 買託運收納大袋<br>
           • <strong>伊勢丹百貨 B1</strong>：購買頂級最新鮮<strong>常溫費南雪 / 瑪德蓮</strong>（Échiré 艾許奶油 / noix de beurre 焦糖費南雪盒裝，隔日帶回台灣分享朋友）<br>
           💡 若藥品有任何備案需求，此時段亦可順路至澀谷木村診所 Walk-in 看診。
         </div>
@@ -513,18 +533,18 @@
         </tr>
         <tr>
           <td>當地交通</td>
-          <td>Skyliner 來回 + 鎌倉江之島 + 市區公車/車資</td>
-          <td>約 NT$ 1,680</td>
+          <td>Skyliner 來回 + 市區地鐵/山手線/公車車資</td>
+          <td>約 NT$ 1,450</td>
         </tr>
         <tr>
           <td>餐飲與雜支</td>
-          <td>4 天餐費、海景咖啡 (不含購物費用)</td>
-          <td>約 NT$ 3,150</td>
+          <td>4 天餐費（含敘敘苑、ONODERA壽司、TEAHOUSE等，不含購物）</td>
+          <td>約 NT$ 3,500</td>
         </tr>
         <tr style="font-weight: 700; background-color: #172554;">
           <td style="color: var(--primary);">總計預算</td>
           <td style="color: var(--primary);">機票 + 住宿 + 全套藥品 + 美髮 + 交通餐飲</td>
-          <td style="color: #38bdf8;">約 NT$ 44,384</td>
+          <td style="color: #38bdf8;">約 NT$ 44,506</td>
         </tr>
       </tbody>
     </table>
