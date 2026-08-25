@@ -41,52 +41,52 @@
     header {
       background: linear-gradient(135deg, #1e3a8a, #0f766e);
       color: white;
-      padding: 30px 20px;
+      padding: 24px 20px;
       border-radius: 16px;
       text-align: center;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.3);
       border: 1px solid var(--border-light);
     }
-    header h1 { font-size: 1.75rem; margin-bottom: 8px; font-weight: 700; color: var(--text-white); }
-    header p { font-size: 0.95rem; opacity: 0.9; color: #cbd5e1; }
+    header h1 { font-size: 1.6rem; margin-bottom: 6px; font-weight: 700; color: var(--text-white); }
+    header p { font-size: 0.9rem; opacity: 0.9; color: #cbd5e1; }
     
     .card {
       background: var(--card-bg);
       border-radius: 14px;
-      padding: 22px;
+      padding: 20px;
       margin-bottom: 20px;
       border: 1px solid var(--border);
       box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
     .card-title {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--primary);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       display: flex;
       align-items: center;
       gap: 8px;
       border-bottom: 1px solid var(--border);
-      padding-bottom: 10px;
+      padding-bottom: 8px;
     }
     
     .info-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 14px;
+      gap: 12px;
     }
     .info-box {
       background: #182234;
       border: 1px solid var(--border);
-      padding: 14px 16px;
+      padding: 12px 14px;
       border-radius: 10px;
     }
-    .info-box strong { color: var(--text-white); display: block; margin-bottom: 6px; font-size: 1rem; }
+    .info-box strong { color: var(--text-white); display: block; margin-bottom: 4px; font-size: 0.95rem; }
     .badge {
       display: inline-block;
       font-size: 0.75rem;
-      padding: 3px 10px;
+      padding: 2px 8px;
       border-radius: 6px;
       font-weight: 600;
       margin-top: 6px;
@@ -101,31 +101,30 @@
       background: #172554;
       border: 1px solid #2563eb;
       border-radius: 10px;
-      padding: 16px;
-      margin-bottom: 14px;
+      padding: 14px 16px;
     }
-    .vjw-card h4 { color: #93c5fd; font-size: 1.05rem; margin-bottom: 10px; }
-    .vjw-item { display: flex; flex-direction: column; margin-bottom: 8px; font-size: 0.92rem; }
+    .vjw-card h4 { color: #93c5fd; font-size: 1rem; margin-bottom: 8px; }
+    .vjw-item { display: flex; flex-direction: column; margin-bottom: 6px; font-size: 0.9rem; }
     @media(min-width: 600px) {
       .vjw-item { flex-direction: row; justify-content: space-between; }
     }
     .vjw-label { color: #94a3b8; font-weight: 600; }
-    .vjw-val { color: #f8fafc; font-family: monospace; font-size: 0.98rem; }
+    .vjw-val { color: #f8fafc; font-family: monospace; font-size: 0.95rem; }
 
     /* 行程時間軸 */
-    .day-block { margin-bottom: 20px; }
+    .day-block { margin-bottom: 18px; }
     .day-header {
       color: var(--primary);
       font-weight: 700;
-      padding: 10px 14px;
+      padding: 8px 12px;
       border-radius: 8px;
-      margin-bottom: 12px;
-      font-size: 1.05rem;
+      margin-bottom: 10px;
+      font-size: 1rem;
       border-left: 4px solid var(--primary);
       background: #172554;
     }
     .timeline-item {
-      padding: 10px 0 10px 16px;
+      padding: 8px 0 8px 16px;
       border-left: 2px solid var(--border-light);
       margin-left: 12px;
       position: relative;
@@ -134,27 +133,28 @@
       content: "";
       position: absolute;
       left: -6px;
-      top: 17px;
+      top: 15px;
       width: 10px;
       height: 10px;
       border-radius: 50%;
       background: var(--primary);
       box-shadow: 0 0 8px var(--primary);
     }
-    .timeline-time { font-weight: 700; color: var(--accent); font-size: 0.9rem; margin-bottom: 2px; }
-    .timeline-content { font-size: 0.96rem; color: var(--text-white); }
+    .timeline-time { font-weight: 700; color: var(--accent); font-size: 0.88rem; margin-bottom: 2px; }
+    .timeline-content { font-size: 0.95rem; color: var(--text-white); }
     .timeline-sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+    .transit-hint { font-size: 0.8rem; color: #64748b; margin-top: 3px; }
 
     /* 預約/重要資訊卡片 */
     .reserve-box, .clinic-box {
       background: #1e1b4b;
       border: 1px solid #4338ca;
       border-radius: 10px;
-      padding: 16px;
-      margin-top: 10px;
+      padding: 14px 16px;
+      margin-top: 8px;
     }
-    .reserve-box h4, .clinic-box h4 { color: #a5b4fc; margin-bottom: 8px; font-size: 1.05rem; }
-    .reserve-detail, .clinic-detail { font-size: 0.9rem; margin-bottom: 4px; }
+    .reserve-box h4, .clinic-box h4 { color: #a5b4fc; margin-bottom: 6px; font-size: 1rem; }
+    .reserve-detail, .clinic-detail { font-size: 0.88rem; margin-bottom: 4px; }
     .reserve-link { color: #38bdf8; text-decoration: none; word-break: break-all; }
     .reserve-link:hover { text-decoration: underline; }
 
@@ -163,10 +163,10 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
     }
     th, td {
-      padding: 12px 14px;
+      padding: 10px 12px;
       text-align: left;
       border-bottom: 1px solid var(--border);
     }
@@ -175,7 +175,7 @@
     
     /* 清單樣式 */
     ul { list-style: none; padding-left: 0; }
-    li { margin-bottom: 10px; position: relative; padding-left: 24px; font-size: 0.95rem; }
+    li { margin-bottom: 8px; position: relative; padding-left: 20px; font-size: 0.92rem; }
     li::before {
       content: "✔";
       position: absolute;
@@ -186,9 +186,9 @@
 
     footer {
       text-align: center;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
-      margin-top: 36px;
+      margin-top: 28px;
       padding-bottom: 10px;
     }
   </style>
@@ -198,7 +198,7 @@
 <div class="container">
   <header>
     <h1>✈️ 東京 4天3夜 獨旅行程</h1>
-    <p>2026.09.14 (一) ～ 2026.09.17 (四) ｜ 藥品領取・森林散策・南青山美食・新宿採購美髮</p>
+    <p>2026.09.14 (一) ～ 2026.09.17 (四) ｜ 藥品領取・原宿青山・新宿採購美髮</p>
   </header>
 
   <!-- 填寫入境表專用快速查閱區 -->
@@ -216,22 +216,22 @@
       </div>
       <div class="vjw-item">
         <span class="vjw-label">都道府縣 / 市區町 (Address)</span>
-        <span class="vjw-val">東京都台東区上野6-7-21 (6-7-21, Ueno, Taito-ku)</span>
+        <span class="vjw-val">東京都台東区上野6-7-21</span>
       </div>
       <div class="vjw-item">
         <span class="vjw-label">聯絡電話 (Phone)</span>
-        <span class="vjw-val">+81 570-020-711 (或 03-5807-7111)</span>
+        <span class="vjw-val">+81 570-020-711</span>
       </div>
-      <div class="vjw-item" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed #3b82f6;">
+      <div class="vjw-item" style="margin-top: 4px; padding-top: 4px; border-top: 1px dashed #3b82f6;">
         <span class="vjw-label">去程航班號 (Flight No.)</span>
-        <span class="vjw-val">GK18 (捷星航空 Jetstar Japan)</span>
+        <span class="vjw-val">GK18 (捷星航空)</span>
       </div>
     </div>
   </div>
 
   <!-- 旅程核心資訊卡片 -->
   <div class="card">
-    <div class="card-title">📌 航班與住宿細節</div>
+    <div class="card-title">📌 航班、住宿與保險細節</div>
     <div class="info-grid">
       <div class="info-box">
         <strong>🏨 住宿飯店</strong>
@@ -242,14 +242,20 @@
       <div class="info-box">
         <strong>🛫 去程航班 (捷星 GK18)</strong>
         訂票代碼：<strong>IVM5SR</strong><br>
-        9/14 14:00 高雄 (國際航廈) → 18:30 成田 (<strong>第3航廈 T3</strong>)<br>
-        <span class="badge badge-amber">手提行李 7kg (無託運)</span>
+        9/14 14:00 高雄 → 18:30 成田 (<strong>第3航廈 T3</strong>)<br>
+        <span class="badge badge-amber">手提 7kg (無託運)</span>
       </div>
       <div class="info-box">
         <strong>🛬 回程航班 (長榮 BR107)</strong>
         訂位代號：<strong>E6ALJC</strong><br>
-        9/17 12:45 成田 (<strong>第1航廈 T1</strong>) → 15:40 高雄 (國際航廈)<br>
+        9/17 12:45 成田 (<strong>第1航廈 T1</strong>) → 15:40 高雄<br>
         <span class="badge badge-green">含 23kg 託運 1 件 + 手提 7kg</span>
+      </div>
+      <div class="info-box">
+        <strong>🛡️ 旅遊保險 (富邦產險)</strong>
+        交易序號：<strong>576064161645</strong> ｜ 保費：<strong>NT$ 549</strong><br>
+        <a class="reserve-link" href="https://b2c.518fb.com/FubonCMS/page/26?_gl=1*hixrq5*_ga*NTM3NDg1OC4xNjg4OTczMzg5*_ga_9N8QHXZSXK*MTY4ODk4MzQxMi4yLjEuMTY4ODk4MzQyNi40Ni4wLjA.*_ga_CJ14Y0QPX0*MTY4ODk4MzQxMi4yLjEuMTY4ODk4MzQyNy40NS4wLjA." target="_blank">📖 富邦理賠流程說明 ↗</a><br>
+        <span class="badge badge-purple">已完成投保</span>
       </div>
       <div class="info-box">
         <strong>📦 核心目標</strong>
@@ -263,9 +269,9 @@
   <div class="card">
     <div class="card-title">📋 出發前準備 Checklist</div>
     <ul>
-      <li><strong>日本 eSIM 網卡</strong>：選購 Docomo/SoftBank 原生線路，出發前加入手機設定。</li>
-      <li><strong>旅遊平安險 + 不便險</strong>：務必加保含「班機延誤」與「海外突發醫療」之產險方案。</li>
-      <li><strong>Visit Japan Web 填寫</strong>：出發前 1~3 天填好入境審查與海關申報，將 QR Code 截圖存入相簿。</li>
+      <li><strong>日本 eSIM 網卡 (NT$ 384)</strong>：SoftBank 5G / Docomo 吃到飽，出發前加入手機設定，落地開啟漫遊。</li>
+      <li><strong>旅遊平安與不便險 (NT$ 549)</strong>：富邦產險投保完成（序號：576064161645）。</li>
+      <li><strong>Visit Japan Web 填寫</strong>：出發前填妥入境審查與海關申報，截圖 QR Code。</li>
       <li><strong>打包備品確認</strong>：自備保冷袋 + 束線帶（紮帶） + 十字行李束帶備妥隨身。</li>
     </ul>
   </div>
@@ -278,75 +284,55 @@
     <div class="day-block">
       <div class="day-header">Day 1 ｜ 9/14 (一) ：新市出發・抵達東京・辦理入住</div>
       <div class="timeline-item">
-        <div class="timeline-time">09:56 - 11:23</div>
-        <div class="timeline-content">新市火車站搭乘 <strong>台鐵區間 3157 車次</strong> 直達高雄車站</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-time">11:30 - 11:55</div>
-        <div class="timeline-content">高雄車站地下連通道轉乘 <strong>高捷紅線（往小港）</strong>，直達高雄國際機場站（R4）</div>
+        <div class="timeline-time">09:56 - 11:55</div>
+        <div class="timeline-content">新市搭台鐵區間 3157 車次 ➔ 高雄車站轉高捷紅線直達小港機場（R4）</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">14:00 - 18:30</div>
-        <div class="timeline-content">高雄起飛 → 捷星 GK18 飛抵成田機場<strong>第3航廈 (T3)</strong></div>
+        <div class="timeline-content">高雄起飛 ➔ 捷星 GK18 飛抵成田 T3</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">18:30 - 20:30</div>
-        <div class="timeline-content">搭乘 T3 免費接駁車至 <strong>T2（機場第2大樓站）</strong>，搭乘 Skyliner 直達京成上野站</div>
-        <div class="timeline-sub">
-          🚆 <strong>推薦班次（Skyliner 68 號）</strong>：<strong>19:43</strong> (T2發車) → <strong>20:24</strong> (抵達京成上野)<br>
-          （備案班次：19:24 發車 / 20:04 發車，車程約 41 分鐘，現場售票機/臨櫃 2,580 日圓）
-        </div>
+        <div class="timeline-content">T3 接駁車至 T2 ➔ Skyliner 直達京成上野站</div>
+        <div class="transit-hint">🚆 推薦 Skyliner 68 號 (19:43 T2發 ➔ 20:24 到上野) ｜ 車程 41 分 ｜ 現場 2,580 日圓</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">20:30 之後</div>
-        <div class="timeline-content">步行入住 APA 飯店，進房第一步：<strong>手動確認房間冰箱電源開關已切至 ON</strong></div>
+        <div class="timeline-content">入住 APA 飯店 ➔ 晚餐：敘敘苑燒肉（上野丸井 9F）</div>
         <div class="timeline-sub">
-          • <strong>晚餐選擇</strong>：<br>
-          &nbsp;&nbsp;1. <strong>敘敘苑燒肉（上野丸井店 9F）</strong>：週一晚間免預約直接 Walk-in，最後點餐 21:30（營業至 22:30）。進店可向店員出示：<code>1名です。窓側の席は空いていますか？</code><br>
-          &nbsp;&nbsp;2. 上野百貨美食街定食外帶 / 超商精緻熟食。<br>
-          • <strong>保冷劑準備</strong>：順路至唐吉訶德或百圓店購買保冷劑，交由 APA 櫃檯代凍。
+          • <strong>飯店提醒</strong>：進房手動確認冰箱電源已切至 ON。<br>
+          • <strong>敘敘苑</strong>：免預約直接 Walk-in（最後點餐 21:30），出示：<code>1名です。窓側の席は空いていますか？</code><br>
+          • <strong>備品</strong>：唐吉訶德或百圓店買保冷劑交由 APA 櫃檯代凍。
         </div>
       </div>
     </div>
 
     <!-- Day 2 -->
     <div class="day-block">
-      <div class="day-header">Day 2 ｜ 9/15 (二) ：明治神宮巨木散策・南青山生活選品・銀座ONODERA壽司・淺草寺點燈</div>
-      <div class="timeline-item">
-        <div class="timeline-time">09:30 - 10:00</div>
-        <div class="timeline-content">上野搭乘 <strong>JR 山手線（外環）</strong> 直達 <strong>原宿站</strong>（車程約 25 分，免換車）</div>
-      </div>
+      <div class="day-header">Day 2 ｜ 9/15 (二) ：明治神宮・表參道南青山・淺草寺點燈</div>
       <div class="timeline-item">
         <div class="timeline-time">10:00 - 11:30</div>
-        <div class="timeline-content"><strong>明治神宮・巨木森林浴散步</strong>：漫步於 70 公頃綠意參道，看台灣巨木大鳥居與百年夫婦楠神木，吸收滿滿芬多精</div>
+        <div class="timeline-content"><strong>明治神宮</strong>：巨木森林步道、大鳥居、夫婦楠神木散策</div>
+        <div class="transit-hint">🚇 JR 山手線（外環）上野直達原宿約 25 分</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-time">11:40 - 12:40</div>
-        <div class="timeline-content">步行至表參道 <strong>GYRE 3F：MoMA Design Store Tokyo</strong> 挖寶創意生活小物與設計文具（可順逛 B1F HAY 家居）</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-time">12:45 - 13:30</div>
-        <div class="timeline-content">漫步至 <strong>SHIRO 表參道本店</strong>（獨立街邊旗艦店，空間開闊無推銷壓力，自主試聞全系列香氛與居家擴香）</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-time">13:35 - 15:00</div>
-        <div class="timeline-content">走進南青山小巷：<strong>Aoyama Flower Market TEAHOUSE 南青山本店</strong>（在綠植與鮮花環繞的溫室花房享用新鮮草本茶、花園輕食或法式吐司）</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-time">15:15 - 16:30</div>
-        <div class="timeline-content"><strong>迴轉鮨 銀座 ONODERA（表參道旗艦店）</strong>：離峰時段輕鬆入座，一人平板點餐享用米其林星級血統的現握壽司（推薦黑鮪魚大腹、海膽）</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-time">16:45 - 17:20</div>
-        <div class="timeline-content">由「表參道站」搭乘 <strong>東京地鐵銀座線</strong> 直達終點 <strong>「淺草站」</strong>（車程 31 分鐘，一車到底免換線）</div>
+        <div class="timeline-time">11:40 - 16:30</div>
+        <div class="timeline-content"><strong>表參道 ＆ 南青山</strong> 逛街、午茶與壽司：</div>
+        <div class="timeline-sub">
+          • <strong>MoMA Design Store（GYRE 3F）</strong>：創意生活小物、設計雜貨（順逛 B1F HAY 家居）<br>
+          • <strong>SHIRO 表參道本店</strong>：香氛、護手霜與居家擴香<br>
+          • <strong>Aoyama Flower Market TEAHOUSE</strong>：南青山本店花房下午茶 / 輕食<br>
+          • <strong>迴轉鮨 銀座 ONODERA</strong>：表參道旗艦店（15:30~16:30 離峰免排隊，平板點餐）
+        </div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">17:30 - 18:45</div>
-        <div class="timeline-content"><strong>淺草寺・黃昏與夜間點燈漫步</strong>：避開白天團客尖峰，漫步於雷門、仲見世通與朱紅五重塔，拍出乾淨無路人的唯美夜景大片</div>
+        <div class="timeline-content"><strong>淺草寺</strong>：傍晚夜間點燈漫步（雷門、仲見世通、五重塔）</div>
+        <div class="transit-hint">🚇 地鐵銀座線：表參道直達淺草 31 分 ｜ 淺草回上野 5 分</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">19:00 之後</div>
-        <div class="timeline-content">淺草搭地鐵銀座線 <strong>5 分鐘（3 站）直達上野</strong>，回 APA 飯店泡澡、敷面膜、放空休息</div>
+        <div class="timeline-content">返回 APA 飯店休息放鬆</div>
       </div>
     </div>
 
@@ -354,40 +340,28 @@
     <div class="day-block">
       <div class="day-header">Day 3 ｜ 9/16 (三) ：湯島取件・新宿採購・池袋美髮沙龍・大塚代購</div>
       <div class="timeline-item">
-        <div class="timeline-time">09:30 - 10:00</div>
-        <div class="timeline-content">從飯店出發搭乘公車前往湯島（班次密集約 10 分鐘一班，車程約 10-15 分）</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-time">10:00 - 10:15</div>
-        <div class="timeline-content">抵達事務所親自領取藥品（純取件約 10 分鐘，出示截圖與護照，裝入自備保冷袋）</div>
-        <div class="timeline-sub">📍 <strong>地點</strong>：東京都文京区湯島4-2-3 竜岡ビル2階202号室</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-time">10:15 - 10:45</div>
-        <div class="timeline-content">搭乘同號公車（反方向）返回上野，將藥品放入 APA 飯店冰箱冷藏中層冷卻保存</div>
+        <div class="timeline-time">10:00 - 10:45</div>
+        <div class="timeline-content"><strong>湯島事務所親自領藥</strong> ➔ 返回 APA 飯店冰箱冷藏</div>
+        <div class="transit-hint">🚌 上野搭公車直達約 10-15 分 ｜ 領完回飯店冷藏</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">11:00 - 17:30</div>
-        <div class="timeline-content">時間充裕！搭山手線前往<strong>新宿採購與逛街</strong>：</div>
+        <div class="timeline-content"><strong>新宿採購與逛街</strong>：</div>
         <div class="timeline-sub">
-          • <strong>高島屋 B1 / Lumine 1</strong>：購買<strong>茅乃舍</strong>（自用高湯包、調味醬 ＆ <strong>記得加買新人新婚禮盒組</strong>）<br>
+          • <strong>高島屋 B1 / Lumine 1</strong>：<strong>茅乃舍</strong>（自用高湯包、調味醬、新人新婚禮盒組）<br>
           • <strong>Lumine Est</strong>：<strong>3COINS (3F)</strong> 買託運收納大袋<br>
-          • <strong>伊勢丹百貨 B1</strong>：購買頂級最新鮮<strong>常溫費南雪 / 瑪德蓮</strong>（Échiré 艾許奶油 / noix de beurre 焦糖費南雪盒裝，隔日帶回台灣分享朋友）<br>
-          💡 若藥品有任何備案需求，此時段亦可順路至澀谷木村診所 Walk-in 看診。
+          • <strong>伊勢丹百貨 B1</strong>：買常溫法式糕點（Échiré / noix de beurre 費南雪）<br>
+          💡 備案需求：澀谷木村診所 Walk-in 看診。
         </div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">18:00 - 19:30</div>
-        <div class="timeline-content">搭山手線前往<strong>池袋（約 8 分）</strong>：<strong>SHE 池袋</strong> 剪髮＋TOKIO 護髮＋碳酸泉 Spa</div>
-        <div class="timeline-sub">預約番號：BF52192059 ｜ 指名設計師：あかり（現場出示 IG 髮型照片即可）</div>
+        <div class="timeline-content"><strong>池袋美髮</strong>：<strong>SHE 池袋</strong> 剪髮＋TOKIO 護髮＋碳酸泉 Spa</div>
+        <div class="timeline-sub">預約番號：BF52192059 ｜ 設計師：あかり ｜ 現場付款 ¥10,230</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">19:40 - 20:30</div>
-        <div class="timeline-content">池袋搭山手線 1 站直達<strong>大塚站（約 2 分）</strong>：前往北口 <strong>ba05 大樓</strong> 購買代購物品</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-time">20:45 之後</div>
-        <div class="timeline-content">返回上野飯店，將常溫戰利品與伴手禮整理至 3COINS 大袋中，完成拉鍊加固與託運準備</div>
+        <div class="timeline-content"><strong>大塚代購</strong>：大塚站北口 <strong>ba05 大樓</strong> 取物 ➔ 回飯店整理打包</div>
       </div>
     </div>
 
@@ -396,35 +370,21 @@
       <div class="day-header">Day 4 ｜ 9/17 (四) ：安心打包・搭機返台・回到新市</div>
       <div class="timeline-item">
         <div class="timeline-time">08:30 - 09:30</div>
-        <div class="timeline-content">退房並向櫃檯領取結冰保冷劑，整齊排入自備保冷袋（保冷劑包毛巾防局部凍傷）</div>
+        <div class="timeline-content">退房、領取結冰保冷劑，排入保冷袋（保冷劑包毛巾防局部凍傷）</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">09:40 - 10:30</div>
-        <div class="timeline-content">京成上野搭 Skyliner 直達成田機場<strong>第一航廈（終點站）</strong></div>
-        <div class="timeline-sub">
-          🚆 <strong>推薦班次（Skyliner 25 號）</strong>：<strong>09:40</strong> (京成上野發車) → <strong>10:21</strong> (抵達第一航廈 T1)<br>
-          （備案班次：09:00 發車 / 10:00 發車，直達機場南翼報到櫃檯）
-        </div>
+        <div class="timeline-content">京成上野搭 Skyliner 直達<strong>成田 T1</strong></div>
+        <div class="transit-hint">🚆 推薦 Skyliner 25 號 (09:40 上野發 ➔ 10:21 到 T1)</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-time">10:30 - 12:45</div>
-        <div class="timeline-content">長榮櫃檯（T1 南翼）報到：3COINS 大袋子<strong>託運</strong>、保冷袋（裝 24 盒藥品）<strong>隨身手提上機</strong></div>
+        <div class="timeline-time">10:30 - 15:40</div>
+        <div class="timeline-content">長榮櫃檯報到（大袋託運 / 藥品保冷袋手提隨身）➔ BR107 返抵高雄小港</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-time">12:45 - 15:40</div>
-        <div class="timeline-content">長榮 BR107 航班起飛 → 15:40 抵達高雄小港機場國際航廈，出關提領行李</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-time">16:25 - 16:45</div>
-        <div class="timeline-content">小港機場搭乘 <strong>高捷紅線</strong> 直達高雄車站（車程 18 分）</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-time">16:52 - 17:48</div>
-        <div class="timeline-content">高雄車站搭乘 <strong>台鐵區間快 3028 車次</strong> 直達新市車站</div>
-        <div class="timeline-sub">
-          • 備案 1：<strong>區間 3242 車次</strong>（<strong>17:18</strong> 高雄發車 → <strong>18:43</strong> 抵達新市）<br>
-          • 備案 2：<strong>區間 3248 車次</strong>（<strong>17:41</strong> 高雄發車 → <strong>19:20</strong> 抵達新市）
-        </div>
+        <div class="timeline-time">16:25 - 17:48</div>
+        <div class="timeline-content">高捷紅線至高雄車站 ➔ 轉台鐵區間快 3028 車次直達新市</div>
+        <div class="transit-hint">備案台鐵：區間 3242 (17:18發) / 區間 3248 (17:41發)</div>
       </div>
     </div>
   </div>
@@ -434,9 +394,8 @@
     <div class="card-title">📦 9/16 藥品取件事務所資訊</div>
     <div class="reserve-box">
       <h4>東京雪谷醫院 湯島事務所</h4>
-      <div class="reserve-detail">🕒 <strong>取件時間</strong>：2026.09.16 (三) 10:00（純取件約 10 分鐘）</div>
+      <div class="reserve-detail">🕒 <strong>取件時間</strong>：2026.09.16 (三) 10:00（約 10 分鐘）</div>
       <div class="reserve-detail">📍 <strong>地址</strong>：東京都文京区湯島4-2-3 竜岡ビル2階202号室</div>
-      <div class="reserve-detail">🚌 <strong>交通建議</strong>：從上野搭乘直達公車約 10-15 分（約 10 分鐘一班），回程搭同號公車直達上野</div>
       <div class="reserve-detail">🎒 <strong>攜帶物品</strong>：護照、預約付款紀錄截圖、自備保冷袋</div>
       <div class="reserve-detail">🗺️ <strong>地圖導航</strong>：<a class="reserve-link" href="https://maps.google.com/maps?q=東京都文京区湯島4-2-3" target="_blank">Google Maps 點此開啟導航 ↗</a></div>
       <div class="reserve-detail" style="margin-top: 6px;">
@@ -452,7 +411,7 @@
     <div class="reserve-box">
       <h4>SHE 池袋 【シー イケブクロ】</h4>
       <div class="reserve-detail">📌 <strong>預約番號</strong>：BF52192059</div>
-      <div class="reserve-detail">🕒 <strong>預約時間</strong>：2026.09.16 (三) 18:00（預計施作 1.5 小時）</div>
+      <div class="reserve-detail">🕒 <strong>預約時間</strong>：2026.09.16 (三) 18:00（約 1.5 小時）</div>
       <div class="reserve-detail">✂️ <strong>指名設計師</strong>：あかり (Akari)</div>
       <div class="reserve-detail">💆‍♀️ <strong>施作內容</strong>：剪髮 ＋ TOKIO/髮質改善護髮 ＋ 碳酸泉 Spa（現地付款 ¥10,230）</div>
       <div class="reserve-detail">📞 <strong>電話</strong>：03-6907-2006</div>
@@ -468,14 +427,9 @@
   <div class="card">
     <div class="card-title">🏥 Walk-in 備案診所資訊</div>
     <div class="clinic-box">
-      <h4>渋谷きむらクリニック（泌尿器科・皮膚科・内科）</h4>
-      <div class="clinic-detail">📍 <strong>地址</strong>：東京都渋谷区渋谷1-14-14 植村ビル5F（澀谷站宮益坂口 / B3 出口步行 1~2 分）</div>
-      <div class="clinic-detail">🕒 <strong>看診時間</strong>：</div>
-      <div class="clinic-detail" style="padding-left: 15px;">
-        • <strong>週一、週二、週三、週五</strong>：11:00 ～ 14:00 ｜ 16:00 ～ 19:30<br>
-        • <strong>週六</strong>：10:00 ～ 13:00 ｜ 14:30 ～ 17:00<br>
-        • <strong>休診日</strong>：週四、週日、國定假日
-      </div>
+      <h4>渋谷きむらクリニック</h4>
+      <div class="clinic-detail">📍 <strong>地址</strong>：東京都渋谷区渋谷1-14-14 植村ビル5F（澀谷站宮益坂口步行 1~2 分）</div>
+      <div class="clinic-detail">🕒 <strong>看診時間</strong>：11:00～14:00 ｜ 16:00～19:30（週三有診）</div>
       <div class="clinic-detail" style="margin-top: 6px;">
         <span class="badge badge-purple">初診帶護照即可</span>
         <span class="badge badge-blue">免預約 Walk-in OK</span>
@@ -487,7 +441,7 @@
   <div class="card">
     <div class="card-title">⚠️ 打包與藥品溫控重點</div>
     <ul>
-      <li><strong>原盒手提隨身</strong>：24 盒猛建樂原盒放入保冷袋隨身登機，絕對不可託運（防貨艙低溫結冰）。</li>
+      <li><strong>原盒手提隨身</strong>：24 盒猛建樂原盒放入保冷袋隨身登機，絕對不可託運。</li>
       <li><strong>防局部凍傷</strong>：結冰保冷劑表面務必包裹毛巾/氣泡紙，勿直接緊貼紙盒。</li>
       <li><strong>安檢出示</strong>：隨身攜帶診所收據/明細，遇問詢告知「Medical use（医薬品）」。</li>
       <li><strong>3COINS 袋加固</strong>：拉鍊頭以束線帶（紮帶）固定綁緊，外層加扣十字行李束帶。</li>
@@ -522,6 +476,16 @@
           <td>NT$ 8,568</td>
         </tr>
         <tr>
+          <td>旅遊保險</td>
+          <td>富邦產險 (序號 576064161645 / 實刷)</td>
+          <td>NT$ 549</td>
+        </tr>
+        <tr>
+          <td>日本 eSIM</td>
+          <td>SoftBank 5G / Docomo 吃到飽 (實刷)</td>
+          <td>NT$ 384</td>
+        </tr>
+        <tr>
           <td>核心藥品</td>
           <td>猛建樂 24 週份 (84,200 日圓)</td>
           <td>約 NT$ 17,682</td>
@@ -534,17 +498,17 @@
         <tr>
           <td>當地交通</td>
           <td>Skyliner 來回 + 市區地鐵/山手線/公車車資</td>
-          <td>約 NT$ 1,450</td>
+          <td>約 NT$ 1,452</td>
         </tr>
         <tr>
           <td>餐飲與雜支</td>
-          <td>4 天餐費（含敘敘苑、ONODERA壽司、TEAHOUSE等，不含購物）</td>
+          <td>4 天餐費（含敘敘苑、ONODERA壽司等，不含購物）</td>
           <td>約 NT$ 3,500</td>
         </tr>
         <tr style="font-weight: 700; background-color: #172554;">
           <td style="color: var(--primary);">總計預算</td>
-          <td style="color: var(--primary);">機票 + 住宿 + 全套藥品 + 美髮 + 交通餐飲</td>
-          <td style="color: #38bdf8;">約 NT$ 44,506</td>
+          <td style="color: var(--primary);">機票 + 住宿 + 保險 + eSIM + 全套藥品 + 美髮 + 交通餐飲</td>
+          <td style="color: #38bdf8;">約 NT$ 45,439</td>
         </tr>
       </tbody>
     </table>
